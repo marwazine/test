@@ -186,7 +186,8 @@
                     <!-- Modification ici : shadow-xl et border-slate-200 pour faire ressortir la carte blanche -->
                     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
                         <div class="h-64 bg-slate-50 relative overflow-hidden">
-                            <img src="images/projet_eau.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+                            <!-- NOTE: Ajout de ./ pour forcer le chemin relatif -->
+                            <img src="./images/projet_eau.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">S3-S4 2025</div>
                         </div>
                         <div class="p-8 flex-grow flex flex-col">
@@ -203,7 +204,7 @@
                     <!-- Photo-pléthysmographe -->
                      <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
                         <div class="h-64 bg-slate-50 relative overflow-hidden">
-                            <img src="images/projet_ppg.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop'">
+                            <img src="./images/projet_ppg.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-500 shadow-sm">S3 2025</div>
                         </div>
                         <div class="p-8 flex-grow flex flex-col">
@@ -226,7 +227,7 @@
                     <!-- Micro-plastiques -->
                     <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col hover:-translate-y-2">
                         <div class="h-64 bg-slate-50 relative overflow-hidden">
-                            <img src="images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
+                            <img src="./images/projet_micro.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2070&auto=format&fit=crop'">
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-accent shadow-sm">S1-S2 2024</div>
                         </div>
                         <div class="p-8 flex-grow flex flex-col">
@@ -258,7 +259,8 @@
                     <!-- Header de la carte -->
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
                         <div class="w-24 h-24 bg-white rounded-2xl border border-slate-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                            <img src="images/logo_iut.jpg" alt="Logo IUT Créteil" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xs text-center\'>IUT</span>'">
+                            <!-- LOGO IUT -->
+                            <img src="./images/logo_iut.jpg" alt="Logo IUT Créteil" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xs text-center\'>IUT</span>'">
                         </div>
                         <div class="flex-grow text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors">BUT Mesures Physiques</h3>
@@ -352,8 +354,9 @@
                 <!-- Licence Physique (Accordéon) -->
                 <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-apple transition cursor-pointer group" onclick="toggleSection('edu-licence', 'icon-licence')">
                     <div class="p-8 flex flex-col md:flex-row items-center gap-8 relative">
-                        <div class="w-24 h-24 bg-purple-50 rounded-2xl border border-purple-100 flex items-center justify-center shrink-0 text-purple-600 font-bold text-xl group-hover:scale-105 transition-transform">
-                            L1
+                        <!-- LOGO UPEC AJOUTÉ ICI -->
+                        <div class="w-24 h-24 bg-purple-50 rounded-2xl border border-purple-100 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                            <img src="./images/logo_upec.jpg" alt="Logo UPEC" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-xl text-purple-600 font-bold\'>L1</span>'">
                         </div>
                         <div class="flex-grow text-center md:text-left">
                             <h3 class="text-2xl font-bold text-slate-900 group-hover:text-purple-600 transition">Licence de Physique</h3>
@@ -411,11 +414,14 @@
                     </div>
                     <div class="text-slate-500 font-medium mb-4 pl-16">Association Au Bonheur des Loulous <i data-lucide="chevron-down" id="icon-asso" class="w-4 h-4 inline-block ml-2 transition-transform duration-300"></i></div>
                     <div id="exp-asso" class="accordion-content bg-slate-50 p-6 rounded-2xl border border-slate-100 ml-16">
-                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-2">
+                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-2 mb-4">
                             <li>Organisation d'événements de collecte de fonds.</li>
                             <li>Conception et déploiement de programmes de sensibilisation.</li>
                             <li>Coordination de bénévoles et gestion des plannings.</li>
                         </ul>
+                        <div class="mt-4">
+                            <img src="./images/asso_activite.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                        </div>
                     </div>
                 </div>
                 <!-- Active Répartition -->
@@ -430,11 +436,15 @@
                     </div>
                     <div class="text-slate-500 font-medium mb-4 pl-16">Active Répartition (Pharmaceutique) <i data-lucide="chevron-down" id="icon-pharma" class="w-4 h-4 inline-block ml-2 transition-transform duration-300"></i></div>
                     <div id="exp-pharma" class="accordion-content bg-slate-50 p-6 rounded-2xl border border-slate-100 ml-16">
-                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-2">
+                        <ul class="list-disc list-inside text-slate-600 text-sm space-y-2 mb-4">
                             <li>Préparation de commandes (retrait & expédition).</li>
                             <li>Tri et organisation des médicaments.</li>
                             <li>Optimisation de l'espace de stockage et des flux logistiques.</li>
                         </ul>
+                        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                             <img src="./images/pharma_equipe.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                             <img src="./images/pharma_lieu.jpg" class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform duration-300" onerror="this.style.display='none'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -665,7 +675,7 @@
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-4xl p-6 relative max-h-[90vh] overflow-y-auto flex flex-col md:flex-row gap-8">
             <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 close-modal z-10"><i data-lucide="x"></i></button>
             <div class="w-full md:w-1/2">
-                <img src="images/projet_eau.jpg" class="w-full h-64 md:h-full rounded-2xl object-cover shadow-md" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
+                <img src="./images/projet_eau.jpg" class="w-full h-64 md:h-full rounded-2xl object-cover shadow-md" onerror="this.src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'">
             </div>
             <div class="w-full md:w-1/2 py-4 pr-4">
                 <h2 class="text-3xl font-bold text-slate-900 mb-2">Journée Mondiale de l'Eau</h2>
@@ -695,7 +705,7 @@
                      <li><strong>Traitement :</strong> Filtre passe-bande actif (0.5Hz - 5Hz) pour isoler le pouls.</li>
                      <li><strong>Amplification :</strong> Gain de 100 via AOP.</li>
                  </ul>
-                 <img src="images/projet_ppg.jpg" class="w-full rounded-xl mt-4 shadow-sm" onerror="this.style.display='none'">
+                 <img src="./images/projet_ppg.jpg" class="w-full rounded-xl mt-4 shadow-sm" onerror="this.style.display='none'">
              </div>
         </div>
     </div>
@@ -712,7 +722,7 @@
                      <li>Filtration et digestion de la matière organique.</li>
                      <li>Identification des polymères par Spectroscopie IR (Infrarouge).</li>
                  </ul>
-                 <img src="images/projet_micro.jpg" class="w-full rounded-xl mt-4 shadow-sm" onerror="this.style.display='none'">
+                 <img src="./images/projet_micro.jpg" class="w-full rounded-xl mt-4 shadow-sm" onerror="this.style.display='none'">
              </div>
         </div>
     </div>
